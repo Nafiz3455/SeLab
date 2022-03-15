@@ -1,0 +1,101 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main()
+{
+    string myText;
+        bool add,sub, mul;
+        bool eq;
+
+
+    ifstream MyReadFile("program.txt");
+
+cout << "Reading from file  " <<endl;
+
+cout<<endl;
+  while (getline (MyReadFile, myText))
+    {
+        cout << myText<<"\n";
+
+     for(int i= 0 ; i< myText.length();i++)
+        {
+            if (myText[i]== '+')
+            {
+
+                add = true;
+                break;
+            }
+            if (myText[i]== '-')
+            {
+
+                sub = true;
+                break;
+            }
+            if (myText[i]== '*')
+            {
+
+                mul = true;
+                break;
+            }
+            if (myText[i]== '='){
+
+                eq = true;
+                break;
+            }
+
+            if (myText[i]== '='){
+
+                eq = true;
+                break;
+            }
+
+
+        }
+
+
+
+}
+
+
+MyReadFile.close();
+
+cout<< endl;
+if (add)
+{
+    cout << "Function-1:add"<<endl;
+}
+if (sub)
+{
+
+    cout<< "Function-2:sub"<<endl;
+}
+ cout<< "Total number of user-defined functions:2"<<endl;
+if (add)
+{
+    cout<< "Operator-1:addition"<<endl;
+
+}
+if (sub)
+{
+    cout<< "Operator-1:subtraction"<<endl;
+
+}
+if (mul)
+{
+
+    cout<< "Operator-3:multiplication"<<endl;
+}
+if (eq)
+{
+    cout<< "Operator-4:assignment"<<endl;
+
+}
+ cout<< "Total number of Operators:4"<<endl;
+
+
+if (add== false && sub == false && mul == false && eq == false )
+    {cout << "no operator";}
+
+
+}
